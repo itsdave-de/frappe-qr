@@ -19,7 +19,7 @@ def get_qr_code(data: str, dark: str = 'black', light: str = 'white', return_htm
     Returns:
     - str: An HTML <div> tag with an embedded <img> and CSS to maintain aspect ratio, or a base64-encoded string, depending on the return_html parameter.
     """
-    qr = segno.make(data)  # Generate QR code
+    qr = segno.make(data, micro=False)  # Generate QR code, ensuring it is not a micro QR code
     buffer = io.BytesIO()  # Create an in-memory bytes buffer
     
     if format == 'svg':
