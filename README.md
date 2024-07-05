@@ -1,5 +1,7 @@
 # QR Code Generator for Frappe
 
+![itsdave qr](itsdave-www-qr.png "itsdave qr")
+
 QR Code Generator for Frappe Framework, based on Segno
 
 Its mainly intended to be used inside print formats.
@@ -29,17 +31,7 @@ This function is ideal for generating QR codes on the fly, with options to custo
 
 You can use the get_qr_code function in a custom HTML field inside the print format builder. Some examples:
 
-## Example 1: Using a Child Table
-
-```
-<div>
-  {% for row in doc.child_table %}
-    <p>{{ row.name }} - {{ row.value }} - {{ get_qr_code(row.qrdata) }}</p>
-  {% endfor %}
-</div>
-```
-
-## Example 2: Static Text
+## Example 1: Static Text
 
 ```
 <div>
@@ -47,11 +39,21 @@ You can use the get_qr_code function in a custom HTML field inside the print for
 </div>
 ```
 
-## Example 3: Using a Variable
+## Example 2: Using a Variable
 
 ```
 <div>
   <p>Variable Data - {{ get_qr_code(doc.some_field) }}</p>
+</div>
+```
+
+## Example 3: Using a Child Table
+
+```
+<div>
+  {% for row in doc.child_table %}
+    <p>{{ row.name }} - {{ row.value }} - {{ get_qr_code(row.qrdata) }}</p>
+  {% endfor %}
 </div>
 ```
 
