@@ -17,8 +17,7 @@ The `get_qr_code` function generates a QR code for a given string, with customiz
 - **dark** (`str`, optional): Color of the QR code's dark modules (default is 'black').
 - **light** (`str`, optional): Color of the QR code's light modules (default is 'white').
 - **return_html** (`bool`, optional): If `True`, returns an HTML `<img>` tag; if `False`, returns a base64-encoded string (default is `True`).
-- **width** (`int`, optional): The width of the QR code image in pixels (default is 200).
-- **height** (`int`, optional): The height of the QR code image in pixels (default is 200).
+- **size** (int, optional): The size (width and height) of the QR code image in pixels (default is 200).
 - **format** (`str`, optional): The format of the QR code ('svg' or 'png', default is 'svg').
 - **scale** (`int`, optional): The scaling factor for PNG output (default is 10).
 
