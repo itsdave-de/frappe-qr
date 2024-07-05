@@ -55,10 +55,9 @@ app_license = "GPLv3"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-#	"methods": "qr.utils.jinja_methods",
-#	"filters": "qr.utils.jinja_filters"
-# }
+jinja = {
+	"methods": "qr.utils.get_qr_code"
+}
 
 # Installation
 # ------------
